@@ -19,6 +19,7 @@ body nav{
     display: flex;
     justify-content: space-between;
 }
+#mobileMenubtn,#mobilemenu{display: none;}
 nav .menu{
     display: flex;
     gap: 3vw;
@@ -705,7 +706,42 @@ footer strong{
     padding: 1vw;
     color: #ff2e2e;
 }
+
 @media screen and ( max-width : 500px) {
+    #mobileMenubtnOff{display: none;}
+    header{    position: relative;
+        z-index: 1;}
+    #mobilemenu{position: fixed;
+        transition: 0.4s;
+        top: 10vw;
+        display: flex;
+        flex-direction: column;
+        width: 107%;
+        left: -3vw;
+        font-size: 3.8vw;
+        gap: 2vw;
+        padding:0;
+        z-index: 1;
+        align-items: center;
+        height: 0vw;
+        box-shadow: -2px 17px 20px #e8e5e59c;
+        background: linear-gradient(180deg, rgb(255, 238, 238) 0%,rgb(255, 238, 238) 3%, rgba(255,255,255,1) 100%);
+        overflow: hidden;}
+    #mobilemenu a{    color: rgb(61, 61, 61);
+        font-weight: bold;
+        transition: 0.6s;}
+    #mobilemenu a:nth-child(1){color: #f54748;}
+    #mobileMenubtn{    display: flex;
+        font-size: 6vw;
+        color: brown;
+        align-items: center;}
+    nav .menu,nav .logo{display: none;}
+    nav #mobileMenubtn .logo{    display: block;
+        font-size: 5.5vw;
+        margin-left: 4vw;}
+    nav .menu1{font-size: 3.9vw;gap: 3.2vw;}
+    nav .menu1 .login{padding: 1.3vw 2.1vw;border-radius: 7.5vw;}
+    body nav{ margin: 2vw 3vw;}
     .avatar{
         display: flex;
         flex-direction: column-reverse;
@@ -739,8 +775,10 @@ footer strong{
     }
     #reviewSection{
         bottom: 70vw;
-        left: 48vw;
+        left: 39vw;
         padding: 1.4vw;
+        filter:none;
+        border-radius: 1.6vw;
     }
     #reviewSection img{
         width: 15vw;
@@ -752,7 +790,7 @@ footer strong{
     #callerSection{
     bottom: 83vw;
     left: 0vw;
-    padding: 1.05vw 3.8vw;
+    padding: 1.45vw 2.6vw;
     }
     #boy{
         width: 7.5vw;
@@ -782,7 +820,7 @@ footer strong{
     .serveSpan3Box{font-size: 4.3vw;}
     .serveSpan3Detail{font-size: 3vw;}
     .foodMenuSpan1{font-size: 3.6vw;}
-    .foodMenuSpan2{font-size: 6.2vw;width: 70vw;}
+    .foodMenuSpan2{font-size: 6.2vw;width: 70vw}
     .popularItemSpanHead span:nth-child(1), .recentItemSpanHead span:nth-child(1){font-size: 4vw;}
     .popularItemSpanHead span:nth-child(2), .recentItemSpanHead span:nth-child(2){font-size: 2.9vw;border-radius: 7vw;width: 17vw;
         height: 6.5vw;}
@@ -790,8 +828,7 @@ footer strong{
         margin: 7vw;}
     .popularItem1, .popularItem2, .popularItem3, .recentItem1, .recentItem2, .recentItem3{    height: 68vw;
         width: 68vw;}
-    .popularItem1Detail, .popularItem2Detail, .popularItem3Detail, .recentItem1Detail, .recentItem2Detail, .recentItem3Detail{
-        background-color: #fff8f8ed;    bottom: -9.5vw;border-radius: 2.5vw;
+    .popularItem1Detail, .popularItem2Detail, .popularItem3Detail, .recentItem1Detail, .recentItem2Detail, .recentItem3Detail{ padding: 1vw 0;   bottom: -9.5vw;border-radius: 2.5vw;
     }
     .popularItem1Detail span:nth-child(1), .popularItem2Detail span:nth-child(1), .popularItem3Detail span:nth-child(1), .recentItem1Detail span:nth-child(1), .recentItem2Detail span:nth-child(1), .recentItem3Detail span:nth-child(1){
         font-size: 3.4vw;
@@ -812,7 +849,9 @@ footer strong{
     .customerReviewSpan1{width: unset;flex-direction: column;}
     .chefImage{width: 90vw;}
     .customerReviewSpan1Box{padding: 1vw 6vw;position: relative;
-        font-size: 5vw;top:unset;align-items: center;
+        font-size: 5vw;top:unset;align-items: center;    font-size: 4vw;
+        color: red;
+        font-weight: bold;
     }
     .customerReviewSpan1ImageBox span:nth-child(4),.customerReviewSpan1ImageBox span:nth-child(3),.customerReviewSpan1ImageBox span:nth-child(2),.customerReviewSpan1ImageBox span:nth-child(1){width: 10vw;height: 10vw;font-size: 2.8vw;}
     .customerReviewSpan2{width: unset;}
@@ -833,7 +872,7 @@ footer strong{
         background: linear-gradient(180deg,rgb(255 255 255) 15%, rgb(255 255 255) 15%,rgb(255 245 245) 50%, rgb(255 245 245) 100%);}
     footer .logo{font-size: 5.85vw;justify-content: center;}
     .footerSpan1{width: 100%;margin-right: 0vw;gap: 3.2vw;align-items: center;}
-    .footerSpan1Detail, .footerSpan2 span, .footerSpan3 span, .footerSpan4 span, .footerSpan4 span, .footerSpan5 span{font-size: 4.05vw;text-align: center;}
+    .footerSpan1Detail, .footerSpan2 span, .footerSpan3 span, .footerSpan4 span, .footerSpan4 span, .footerSpan5 span{margin: 0 5vw;font-size: 3.65vw;text-align: center;}
     .footerBrands{gap: 5vw;font-size: 4.5vw;}
     .footerSpan2, .footerSpan3, .footerSpan4{width: 100%;margin: 6vw 0;align-items: center;}
     footer strong{font-size: 5.4vw;}
