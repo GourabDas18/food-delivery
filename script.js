@@ -6,7 +6,7 @@ window.onload=()=>{
             case false:
                 menu=true;
                 console.log(e.target)
-                document.getElementById('mobilemenu').style.height = "30vw";
+                document.getElementById('mobilemenu').style.height = "12rem";
                 document.getElementById('mobilemenu').style.padding = "3vw 0";
 document.getElementById("mobileMenubtnOn").style.display="none";
 document.getElementById("mobileMenubtnOff").style.display="block";

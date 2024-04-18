@@ -19,6 +19,10 @@ body nav{
     display: flex;
     justify-content: space-between;
 }
+*{
+    transition: 0.4s ease;
+    scroll-behavior: smooth;
+}
 #mobileMenubtn,#mobilemenu{display: none;}
 nav .menu{
     display: flex;
@@ -28,6 +32,7 @@ nav .menu{
     font-size: 0.9vw;
     width: 33%;
     justify-content: center;
+    list-style: none;
 }
 nav .menu1{
     display: flex;
@@ -52,6 +57,7 @@ nav .menu a {
     font-weight: bold;
     transition: 0.6s;
 }
+
 nav .menu a:hover{
    
     color: #f54748;
@@ -103,6 +109,7 @@ nav .logo{
     gap: 2vw;
     min-width: 55%;
 }
+
 .leftBox span:nth-child(1){
     padding: 0.5vw 1.1vw;
     font-size: 0.9vw;
@@ -334,7 +341,7 @@ nav .logo{
     width: 100%;
     justify-content: space-around;
 }
-.serveSpan3 img{
+.serveSpan3 div img{
     filter: drop-shadow(2px 4px 6px #9e8585);
 }
 .serveSpan3Box{
@@ -352,17 +359,17 @@ nav .logo{
     text-align: center;
     font-size: 1vw;
 }
-.serveSpan3 span:nth-child(1) img{
+.serveSpan3 div:nth-child(1) img{
     width: 11vw;
     filter: drop-shadow(2px 4px 6px #9e8585);
     height: 10vw;
 }
-.serveSpan3 span:nth-child(2) img{
+.serveSpan3 div:nth-child(2) img{
     width: 10vw;
     filter: drop-shadow(2px 4px 6px #9e8585);
     height: 9vw;
 }
-.serveSpan3 span:nth-child(3) img{
+.serveSpan3 div:nth-child(3) img{
     width: 8w;
     filter: drop-shadow(2px 4px 6px #9e8585);
     height: 9vw;
@@ -433,50 +440,61 @@ nav .logo{
     margin: 1vw;
     border-radius: 1vw;
     border: 6px solid #ecd3d2;
+    transition: 0.4s ease;
+}
+.popularItem1, .popularItem2, .popularItem3, .recentItem1, .recentItem2, .recentItem3 {
+    background-position: center;
+    &:hover {
+        background-size: 180%;
+    }
+}
+.popularItem1:hover .popularItem1Detail, .popularItem2:hover .popularItem2Detail, .popularItem3:hover .popularItem3Detail{
+ bottom: -50%;
+}
+.recentItem1:hover .recentItem1Detail, .recentItem2:hover .recentItem2Detail, .recentItem3:hover .recentItem3Detail {
+    bottom: -50%;
 }
 .popularItem1{
     background-image: url('./PIZZA/pizza-g6b68481c1_1280.jpg');
     background-size: cover;
+    background-position: center;
 }
 .popularItem2{
     background-image: url('./PIZZA/pizza-gbda66f367_1280.jpg');
     background-size: cover;
+    background-position: center;
 }
 .popularItem3{
     background-image: url('./PIZZA/pizza-gdecb08b62_1280.jpg');
     background-size: cover;
+    background-position: center;
 }
 .popularItem1Detail,.popularItem2Detail,.popularItem3Detail,.recentItem1Detail,.recentItem2Detail,.recentItem3Detail{
-    background-color: #ffe4e4ed;
-    backdrop-filter: blur(3px);
-    filter: drop-shadow(2px 2px 2px black);
     position: relative;
-    bottom: -5.5vw;
     width: 86%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 0.5vw;
-    border-bottom: 2px solid #80808021;
+
 }
-.popularItem1Detail span:nth-child(1),.popularItem2Detail span:nth-child(1),.popularItem3Detail span:nth-child(1),.recentItem1Detail span:nth-child(1),.recentItem2Detail span:nth-child(1),.recentItem3Detail span:nth-child(1){
+.popularItem1Detail div:nth-child(1),.popularItem2Detail span:nth-child(1),.popularItem3Detail span:nth-child(1),.recentItem1Detail span:nth-child(1),.recentItem2Detail span:nth-child(1),.recentItem3Detail span:nth-child(1){
     font-size: 1vw;
     color: rgb(24, 23, 23);
     margin-top: 0.4vw;
     font-weight: bold;
 }
-.popularItem1Detail span:nth-child(2),.popularItem2Detail span:nth-child(2),.popularItem3Detail span:nth-child(2),.recentItem1Detail span:nth-child(2),.recentItem2Detail span:nth-child(2),.recentItem3Detail span:nth-child(2){
+.popularItem1Detail div:nth-child(2),.popularItem2Detail span:nth-child(2),.popularItem3Detail span:nth-child(2),.recentItem1Detail span:nth-child(2),.recentItem2Detail span:nth-child(2),.recentItem3Detail span:nth-child(2){
     font-size: 1.34vw;
     color: #453434;
     font-weight: bold;
 }
-.popularItem1Detail span:nth-child(2) strong,.popularItem2Detail span:nth-child(2) strong,.popularItem3Detail span:nth-child(2) strong,.recentItem1Detail span:nth-child(2) strong,.recentItem2Detail span:nth-child(2) strong,.recentItem3Detail span:nth-child(2) strong{
+.popularItem1Detail div:nth-child(2) strong,.popularItem2Detail span:nth-child(2) strong,.popularItem3Detail span:nth-child(2) strong,.recentItem1Detail span:nth-child(2) strong,.recentItem2Detail span:nth-child(2) strong,.recentItem3Detail span:nth-child(2) strong{
     font-size: 0.95vw;
     color: #e42222;
     font-weight: bold;
 }
-.popularItem1Detail span:nth-child(3),.popularItem2Detail span:nth-child(3),.popularItem3Detail span:nth-child(3),.recentItem1Detail span:nth-child(3),.recentItem2Detail span:nth-child(3),.recentItem3Detail span:nth-child(3){
+.popularItem1Detail div:nth-child(3),.popularItem2Detail span:nth-child(3),.popularItem3Detail span:nth-child(3),.recentItem1Detail span:nth-child(3),.recentItem2Detail span:nth-child(3),.recentItem3Detail span:nth-child(3){
     display: flex;
     font-size: 0.75vw;
     padding: 0.8vw 1.5vw;
@@ -535,7 +553,7 @@ nav .logo{
     box-shadow: 5px 7px 20px #8080808c;
 }
 .customerReviewSpan1ImageBox{display: flex;}
-.customerReviewSpan1ImageBox span:nth-child(1){
+.customerReviewSpan1ImageBox div:nth-child(1){
     background-image: url("./PERSONS/woman.avif");
     width: 3vw;
     height: 3vw;
@@ -545,7 +563,7 @@ nav .logo{
     position: relative;
     border: 1px solid darkgrey;
 }
-.customerReviewSpan1ImageBox span:nth-child(2){
+.customerReviewSpan1ImageBox div:nth-child(2){
     background-image: url("./PERSONS/woman2.avif");
     width: 3vw;
     height: 3vw;
@@ -556,7 +574,7 @@ nav .logo{
     border: 1px solid darkgrey;
     left: -0.3vw;
 }
-.customerReviewSpan1ImageBox span:nth-child(3){
+.customerReviewSpan1ImageBox div:nth-child(3){
     background-image: url("./PERSONS/woman3.avif");
     width: 3vw;
     height: 3vw;
@@ -567,7 +585,7 @@ nav .logo{
     border: 1px solid darkgrey;
     left: -0.6vw;
 }
-.customerReviewSpan1ImageBox span:nth-child(4){
+.customerReviewSpan1ImageBox div:nth-child(4){
     background-color: red;
     width: 3vw;
     height: 3vw;
@@ -707,39 +725,48 @@ footer strong{
     color: #ff2e2e;
 }
 
-@media screen and ( max-width : 500px) {
+@media screen and ( max-width : 900px) {
     #mobileMenubtnOff{display: none;}
     header{    position: relative;
         z-index: 1;}
-    #mobilemenu{position: fixed;
+    #mobilemenu{
         transition: 0.4s;
-        top: 10vw;
         display: flex;
         flex-direction: column;
         width: 107%;
         left: -3vw;
-        font-size: 3.8vw;
         gap: 2vw;
-        padding:0;
-        z-index: 1;
         align-items: center;
         height: 0vw;
         box-shadow: -2px 17px 20px #e8e5e59c;
         background: linear-gradient(180deg, rgb(255, 238, 238) 0%,rgb(255, 238, 238) 3%, rgba(255,255,255,1) 100%);
-        overflow: hidden;}
+        overflow: hidden;
+        list-style: none;
+    padding: 0;
+    z-index: 10000;
+    position: absolute;
+    top: 0;
+    margin-top: 3rem;
+    font-size: 1.05rem;
+    }
     #mobilemenu a{    color: rgb(61, 61, 61);
         font-weight: bold;
         transition: 0.6s;}
     #mobilemenu a:nth-child(1){color: #f54748;}
     #mobileMenubtn{    display: flex;
-        font-size: 6vw;
+        z-index: 100;
+        font-size: 1.6rem;
         color: brown;
         align-items: center;}
     nav .menu,nav .logo{display: none;}
+    nav{
+        position: relative;
+        z-index: 100;
+    }
     nav #mobileMenubtn .logo{    display: block;
-        font-size: 5.5vw;
+        font-size: 1.5rem;
         margin-left: 4vw;}
-    nav .menu1{font-size: 3.9vw;gap: 3.2vw;}
+    nav .menu1{font-size: 1rem;gap: 3.2vw;}
     nav .menu1 .login{padding: 1.3vw 2.1vw;border-radius: 7.5vw;}
     body nav{ margin: 2vw 3vw;}
     .avatar{
@@ -749,8 +776,16 @@ footer strong{
     .rightbox img:nth-child(1){
         width: 98vw;
     }
+    .introbtn{
+        font-size: 0.8rem;
+    }
     .leftBox{
         min-width: 100%;gap:4vw;
+        align-items: center;
+    }
+    .leftBox h2{
+        text-align: center;
+        font-size: 2rem;
     }
     .leftBox span:nth-child(1){
     padding: 1.5vw 2.6vw;
@@ -774,60 +809,67 @@ footer strong{
         left: 53vw;
     }
     #reviewSection{
-        bottom: 70vw;
+        bottom: 48vw;
         left: 39vw;
         padding: 1.4vw;
         filter:none;
         border-radius: 1.6vw;
+        margin-top: 10rem;
     }
     #reviewSection img{
-        width: 15vw;
-    height: 11vw;
+        width: 6rem;
+        height: 4rem;
     }
     #reviewSection .reviewSpan{width: 22vw;}
     #reviewSection span .itemName{    font-size: 2.4vw;}
     #reviewSection span .stars{font-size: 1.8vw;}
     #callerSection{
-    bottom: 83vw;
+    bottom: 53vw;
     left: 0vw;
     padding: 1.45vw 2.6vw;
     }
     #boy{
-        width: 7.5vw;
-        height: 7.2vw;
+        width: 2rem;
+        height: 2rem;
+    
     }
     .name span:nth-child(1){font-size: 2.5vw;}
     .name span:nth-child(2){font-size: 2vw;}
-    #callerSection i{padding: 1.6vw;font-size: 2vw;}
+    #callerSection i{padding: 1.6vw;font-size: 2vw}
     .leftBox span:nth-child(4){gap: 10vw;}
     .leftBox span:nth-child(4) button{width: 35vw;padding: 3.55vw 3.3vw;
         font-size: 3.65vw;}
     .leftBox span:nth-child(4) span{width: 41vw;gap: 3.5vw;font-size: 3vw;}
-    .customerRating{margin: 13vw 0;}
-    .women1, .women2, .women3{width: 12.3vw;
-        height: 12.3vw;border-radius: 12vw;}
+    .customerRating{margin: 13vw auto;
+        width: fit-content;}
+    .women1, .women2, .women3{
+        width: 3rem;
+        height: 3rem;
+        border-radius: 12vw;}
     .customerRatingDiv{    gap: 2vw;
         margin: 0vw 7vw;top:0;flex-direction: column;align-items: flex-start;}
-    .customerRatingDivSpan2{font-size: 4.95vw;
-        margin-left: 3vw;}
+    .customerRatingDivSpan2 h2{font-size: 1.8rem;}
+    .customerRatingDivSpan2 {font-size: 1.2rem;}
     .customerRatingDivSpan2 span:nth-child(2){    font-size: 2.75vw;}
     .serveSpan1{font-size: 4.2vw;}
-    .serveSpan2{font-size: 7vw;}
+    .serveSpan2{font-size: 2rem;}
     .serveSpan3{justify-content: unset;gap: 19vw;flex-direction: column;margin: 8vw 0;}
     .serveSpan3 span:nth-child(1) img{ width: 31vw;height: 30vw;}
     .serveSpan3 span:nth-child(2) img{width: 25vw;height: 27vw;}
     .serveSpan3 span:nth-child(3) img{width: 27vw;height: 23vw;}
-    .serveSpan3Box{font-size: 4.3vw;}
-    .serveSpan3Detail{font-size: 3vw;}
-    .foodMenuSpan1{font-size: 3.6vw;}
-    .foodMenuSpan2{font-size: 6.2vw;width: 70vw}
+    .serveSpan3Box{font-size: 1.2rem;}
+    .serveSpan3Detail{font-size: 1rem;}
+    .foodMenuSpan1{font-size: 1.1rem;}
+    .foodMenuSpan2{font-size: 1.8rem;width: 70vw}
     .popularItemSpanHead span:nth-child(1), .recentItemSpanHead span:nth-child(1){font-size: 4vw;}
     .popularItemSpanHead span:nth-child(2), .recentItemSpanHead span:nth-child(2){font-size: 2.9vw;border-radius: 7vw;width: 17vw;
         height: 6.5vw;}
     .popularItemSpanBody, .recentItemSpanBody{gap: 12vw;justify-content: unset;flex-direction: column;align-items: center;
         margin: 7vw;}
-    .popularItem1, .popularItem2, .popularItem3, .recentItem1, .recentItem2, .recentItem3{    height: 68vw;
-        width: 68vw;}
+    .popularItem1, .popularItem2, .popularItem3, .recentItem1, .recentItem2, .recentItem3{
+        height: 20rem;
+        width: 20rem;
+    }
     .popularItem1Detail, .popularItem2Detail, .popularItem3Detail, .recentItem1Detail, .recentItem2Detail, .recentItem3Detail{ padding: 1vw 0;   bottom: -9.5vw;border-radius: 2.5vw;
     }
     .popularItem1Detail span:nth-child(1), .popularItem2Detail span:nth-child(1), .popularItem3Detail span:nth-child(1), .recentItem1Detail span:nth-child(1), .recentItem2Detail span:nth-child(1), .recentItem3Detail span:nth-child(1){
@@ -847,35 +889,36 @@ footer strong{
     .customerReview{    flex-direction: column;
         align-items: center;gap:8vw;}
     .customerReviewSpan1{width: unset;flex-direction: column;}
-    .chefImage{width: 90vw;}
+    .chefImage{width: 25rem;}
     .customerReviewSpan1Box{padding: 1vw 6vw;position: relative;
-        font-size: 5vw;top:unset;align-items: center;    font-size: 4vw;
+        font-size: 1.2rem;top:unset;align-items: center;
         color: red;
         font-weight: bold;
     }
-    .customerReviewSpan1ImageBox span:nth-child(4),.customerReviewSpan1ImageBox span:nth-child(3),.customerReviewSpan1ImageBox span:nth-child(2),.customerReviewSpan1ImageBox span:nth-child(1){width: 10vw;height: 10vw;font-size: 2.8vw;}
+    .customerReviewSpan1ImageBox div:nth-child(4),.customerReviewSpan1ImageBox div:nth-child(3),.customerReviewSpan1ImageBox div:nth-child(2),.customerReviewSpan1ImageBox div:nth-child(1)  {  width: 4rem;
+    height: 4rem;font-size: 2.8vw;border-radius: 1000vw;}
     .customerReviewSpan2{width: unset;}
-    .customerReviewSpan2Head1{font-size: 5.2vw;}
-    .customerReviewSpan2Head2{font-size: 7vw;width: 95%;}
-    .customerReviewSpan2Review{padding: 4vw 7.3vw;font-size: 4.2vw;}
+    .customerReviewSpan2Head1{font-size: 1.2rem;}
+    .customerReviewSpan2Head2{font-size: 2rem;width: 95%;}
+    .customerReviewSpan2Review{padding: 4vw 7.3vw;font-size: 1.1rem;}
     .customerReviewSpan2Profile{gap: 3vw;margin-left: 7vw;}
     .customerReviewSpan2Profile img{width: 21vw;height: 16vw;border-radius: 8vw;}
     .customerReviewSpan2ProfileBox{gap: 0.7vw;}
-    .customerReviewSpan2ProfileName{font-size: 4.1vw;}
-    .customerReviewSpan2ProfileDetail{font-size: 3.25vw;}
+    .customerReviewSpan2ProfileName{font-size: 1.2rem;}
+    .customerReviewSpan2ProfileDetail{font-size: 1.1rem;}
     .customerReviewSpan2Stars{margin-left: 30vw;}
-    .customerReviewSpan2Stars i{font-size: 2.9vw;margin: 0.4vw;}
+    .customerReviewSpan2Stars i{font-size: 0.8rem;margin: 0.4vw;}
     footer{display: flex;
         margin: 30vw 0vw 0vw 0vw;
         justify-content: space-between;
         flex-direction: column;
         background: linear-gradient(180deg,rgb(255 255 255) 15%, rgb(255 255 255) 15%,rgb(255 245 245) 50%, rgb(255 245 245) 100%);}
-    footer .logo{font-size: 5.85vw;justify-content: center;}
+    footer .logo{font-size: 1.7rem;justify-content: center;}
     .footerSpan1{width: 100%;margin-right: 0vw;gap: 3.2vw;align-items: center;}
-    .footerSpan1Detail, .footerSpan2 span, .footerSpan3 span, .footerSpan4 span, .footerSpan4 span, .footerSpan5 span{margin: 0 5vw;font-size: 3.65vw;text-align: center;}
-    .footerBrands{gap: 5vw;font-size: 4.5vw;}
+    .footerSpan1Detail, .footerSpan2 span, .footerSpan3 span, .footerSpan4 span, .footerSpan4 span, .footerSpan5 span{margin: 0 5vw;font-size: 1.2rem;text-align: center;}
+    .footerBrands{gap: 5vw;font-size: 1.1rem;}
     .footerSpan2, .footerSpan3, .footerSpan4{width: 100%;margin: 6vw 0;align-items: center;}
-    footer strong{font-size: 5.4vw;}
+    footer strong{font-size: 1.5rem;}
     .footerSpan5{
         width: 100%;
         align-items: center;
@@ -884,11 +927,35 @@ footer strong{
     }
     .footerEmail{    border-radius: 7vw;
         width: 82%;    border: 1.5px solid #b86969;
-        height: 14vw;
+        height: 4rem;
         justify-content: space-evenly;}
-    .footerEmail input{padding: 3vw;
+    .footerEmail input{padding: 0.2rem;
         border-radius: 2vw;
         width: 80%;
-        font-size: 3.8vw;background: transparent;}
+        font-size: 1rem;background: transparent;}
     
+}
+
+@media screen and (max-width: 600px) {
+    #reviewSection{
+        bottom: 30rem;
+        left: 39vw;
+        padding: 1.4vw;
+        filter:none;
+        border-radius: 1.6vw;
+        margin-bottom: 4rem;
+    }
+    #callerSection{
+        bottom: 28rem;
+        left: 0vw;
+        padding: 1.45vw 2.6vw;
+        margin-bottom: 2rem;
+        }
+
+      .leftBox{
+        padding-top: 8rem;
+      }  
+      .startbtn{
+        padding: 0.5rem 2rem;
+      }
 }

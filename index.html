@@ -11,194 +11,210 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="./script.js"></script>
     <title>Foody</title>
 </head>
 <body>
     <header>
         <nav data-aos="fade-in">
-            <span id="mobileMenubtn"><i class="fi fi-sr-apps" id="mobileMenubtnOn"></i><i class="fi fi-sr-angle-circle-up" id="mobileMenubtnOff"></i><span class="logo"><i class="fi fi-rr-pizza-slice"></i><span>Foody</span></span></span>
+            <span id="mobileMenubtn"><i class="fi fi-sr-apps text-xl" id="mobileMenubtnOn"></i><i class="fi fi-sr-angle-circle-up" id="mobileMenubtnOff"></i><span class="logo"><i class="fi fi-rr-pizza-slice"></i><span>Foody</span></span></span>
             <span class="logo"><i class="fi fi-rr-pizza-slice"></i><span>Foody</span></span>
-            <span class="menu">
-                <a href="#">Home</a>
-                <a href="#service">Services</a>
-                <a href="#">Menu</a>
-                <a href="#">Contact</a>
-            </span>
-            <span id="mobilemenu">
-                <a href="#">Home</a>
-                <a href="#service">Services</a>
-                <a href="#">Menu</a>
-                <a href="#">Contact</a>
-            </span>
-            <span class="menu1">
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#foodMenu">Menu</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <ul id="mobilemenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#foodMenu">Menu</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <div class="menu1">
                 <i class="fi fi-rr-search"></i>
                 <i class="fi fi-rr-comment-alt"></i>
-                <span class="login">
+                <div class="login">
                     <i class="fi fi-rr-circle-user"></i>
                     login
-                </span>
-            </span>
-                
+                </div>
+            </div>
             </span>
         </nav>
-    </header>
-    <section class="avatar">
-       <div class="leftBox" data-aos="fade-in" data-aos-duration="1700">
-          <span><span>More than Faster</span> <i class="fi fi-rr-location-alt"></i></span>
-          <span>
-            Be The Fastest In Delivering
-            Your <strong>Food</strong>
-          </span>
-          <span>
-            Our job is to filling your tummy with delicious food and with fast and free delivery.
-          </span>
-          <span>
-            <button>Get Started</button>
-            <span><i class="fi fi-sr-play"></i> <span>Watch Video</span></span>
-          </span>
-       </div>
-       <div class="rightBox">
-          <img src="./IMAGE/hero.png" alt="Avatar">
-          <img src="./IMAGE/watch.png" alt="watch">
-          <img src="./PIZZA/pizza2.png" alt="pizza" >
-          <div id="callerSection" data-aos="fade-right" data-aos-delay="800">
-            <img src="./IMAGE/boy.png" id="boy" alt="courier">
-            <span class="name">
-                <span>Richi Richard</span>
-                <span>Food Courier</span>
-            </span>
-            <i class="fi fi-rr-phone-flip"></i>
-          </div>
-          <div id="reviewSection" data-aos="fade-left" data-aos-delay="1250">
-           <img src="./PIZZA/pizza1.jpg" alt="pizza">
-           <span class="reviewSpan">
-            <span class="itemName">Italian Pizza</span>
-            <span class="stars">
-                <i class="fi fi-sr-star"></i>
-                <i class="fi fi-sr-star"></i>
-                <i class="fi fi-sr-star"></i>
-                <i class="fi fi-sr-star"></i>
-                <i class="fi fi-rr-star"></i>
-            </span>
-            <span class="itemName">
-                <strong>$</strong>
-                7.5
-            </span>
-           </span>
-          </div>
-       </div>
-       
-    </section>
-    <section class="customerRating">
-        <div class="customerRatingDiv">
-            <span class="customerRatingDivSpan1">
-                <span class="women1"></span>
-                <span class="women2"></span>
-                <span class="women3"></span>
-            </span>
-            <span class="customerRatingDivSpan2">
-                <span>Our Happy Customer</span>
-                <span>
-                    <i class="fi fi-sr-star"></i>
-                    <span>4.8 &nbsp;&nbsp;</span>
-                    <span>(12.5k Review)</span>
+
+        <div class="avatar">
+            <div class="leftBox" data-aos="fade-in" data-aos-duration="1700">
+               <div class="text-red-500 font-bold flex flex-row items-center gap-4 bg-red-100 w-fit px-6 py-4 rounded-full introbtn"><p>More than Faster</p> <i class="fi fi-rr-location-alt"></i></div>
+               <h2 class="text-[3rem]">
+                 Be The Fastest In Delivering <br>
+                 Your <strong>Food</strong>
+               </h2>
+               <p>
+                 Our job is to filling your tummy with delicious food and <br>with fast and free delivery.
+               </p>
+               <div class="flex flex-row items-center gap-8">
+                 <button class="px-10 py-7  shadow-xl text-white bg-red-500 rounded-full startbtn">Get Started</button>
+                 <div class="flex flex-row gap-4 items-center"><i class="fi fi-sr-play bg-yellow-300 p-3 rounded-full"></i> <p class="drop-shadow-2xl font-semibold text-gray-700">Watch Video</p></div>
+               </div>
+            </div>
+            <div class="rightBox">
+               <img src="./IMAGE/hero.png" alt="Avatar">
+               <img src="./IMAGE/watch.png" alt="watch">
+               <img src="./PIZZA/pizza2.png" alt="pizza" >
+               <div id="callerSection" data-aos="fade-right" data-aos-delay="800" class="cursor-pointer">
+                 <img src="./IMAGE/boy.png" id="boy" alt="courier">
+                 <div class="name">
+                     <p class="text-xs font-semibold">Richi Richard</p>
+                     <p class="text-xs">Food Courier</p>
+                 </div>
+                 <i class="fi fi-rr-phone-flip"></i>
+               </div>
+               <div id="reviewSection" data-aos="fade-left" data-aos-delay="1250" class="w-max flex flex-row items-center">
+                <img src="./PIZZA/pizza1.jpg" alt="pizza" class="mr-2">
+                <div class="flex flex-col gap-4">
+                    <div class="flex flex-col">
+                        <p class="itemName text-sm">Italian Pizza</p>
+                        <div class="stars flex flex-row items-center">
+                            <i class="fi fi-sr-star text-red-500"></i>
+                            <i class="fi fi-sr-star text-red-500"></i>
+                            <i class="fi fi-sr-star text-red-500"></i>
+                            <i class="fi fi-sr-star text-red-500"></i>
+                            <i class="fi fi-rr-star text-red-500"></i>
+                        </div>
+                    </div>
+                 <p class="itemName text-lg text-red-500">
+                     <strong>$</strong>
+                     7.5
+                 </p>
                 </span>
-            </span>
+               </div>
+            </div>
+            
+        </div>
+    </header>
+
+<main class="my-10">
+    <section class="customerRating">
+        <div class="customerRatingDiv flex flex-row gap-0">
+            <div class="customerRatingDivSpan1">
+                <div class="women1"></div>
+                <div class="women2"></div>
+                <div class="women3"></div>
+            </div>
+            <div class="customerRatingDivSpan2">
+                <h2 class="font-semibold">Our Happy Customer</h2>
+                <div class="flex flex-col gap-1">
+                    <div class="flex flex-row items-center gap-1">
+                        <i class="fi fi-sr-star text-red-500"></i>
+                    <p class="text-sm">4.8 &nbsp;&nbsp;</p>
+                    </div>
+                    <p class="text-xs">(12.5k Review)</p>
+                </div>
+            </div>
         </div>
     </section>
+
     <section class="serve" id="service">
-        <span class="serveSpan1">WHAT WE SERVE</span>
-        <span class="serveSpan2">YOUR FAVOURITE FOOD<br>
+        <h2 class="serveSpan1">WHAT WE SERVE</h2>
+        <p class="serveSpan2">YOUR FAVOURITE FOOD<br>
         DELIVERY PARTNER
-        </span>
-        <span class="serveSpan3">
-            <span class="serveSpan3Box" data-aos="fade-up" data-aos-duration="1000"><img src="./IMAGE/best-quality.png" alt="best quality" ><span>Best Quality</span><span class="serveSpan3Detail">Not Only Fast, Quality Is Also Number One</span></span>
-            <span class="serveSpan3Box" data-aos="fade-up" data-aos-duration="1000"><img src="./IMAGE/easy-to-order.png" alt="easy to order" ><span>Easy To Order</span><span class="serveSpan3Detail">You Only Need A Few Steps To Ordering Food</span></span>
-            <span class="serveSpan3Box" data-aos="fade-up" data-aos-duration="1000"><img src="./IMAGE/easy-deliver.png" alt="fast delivery" ><span>Fastest Delivery</span><span class="serveSpan3Detail">Delivery Is Always On Time, Even Faster</span></span>
-        </span>
+        </p>
+        <div class="serveSpan3">
+            <div class="serveSpan3Box" data-aos="fade-up" data-aos-duration="1000"><img src="./IMAGE/best-quality.png" alt="best quality" ><h2>Best Quality</h2><p class="serveSpan3Detail">Not Only Fast, Quality Is Also Number One</p></div>
+            <div class="serveSpan3Box" data-aos="fade-up" data-aos-duration="1000"><img src="./IMAGE/easy-to-order.png" alt="easy to order" ><h2>Easy To Order</h2><p class="serveSpan3Detail">You Only Need A Few Steps To Ordering Food</p></div>
+            <div class="serveSpan3Box" data-aos="fade-up" data-aos-duration="1000"><img src="./IMAGE/easy-deliver.png" alt="fast delivery" ><h2>Fastest Delivery</h2><p class="serveSpan3Detail">Delivery Is Always On Time, Even Faster</p></div>
+        </div>
     </section>
-    <section class="foodMenu" >
-         <span class="foodMenuSpan1">OUR MENU</span>
-         <span class="foodMenuSpan2">Menu That Always Makes You Fall In Love</span>
-         <span class="popularItemSpan">
-            <span class="popularItemSpanHead"><span>Popular Items</span><span>See All</span></span>
-            <span class="popularItemSpanBody">
-            <span class="popularItem1" data-aos="fade-up" data-aos-duration="1000">
-                    <span class="popularItem1Detail">
-                    <span>Italian Pizza</span>
-                    <span><strong>$</strong> 7.49</span>
-                    <span>Buy Now <strong>></strong></span>
-                    </span>
+    <section class="foodMenu" id="foodMenu">
+         <h2 class="foodMenuSpan1 text-3xl">OUR MENU</h2>
+         <p class="foodMenuSpan2 text-lg">Menu That Always Makes You Fall In Love</p>
+         <div class="popularItemSpan">
+            <span class="popularItemSpanHead">
+                <h3 class="text-2xl pb-4 border-b-2 border-gray-600">Popular Items</h3>
+                <a href="#" class="px-8 py-4 bg-orange-200 text-red-500 rounded-full text-sm hover:shadow-xl">See All</a>
             </span>
-            <span class="popularItem2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                <span class="popularItem2Detail">
-                <span>Italian Pizza</span>
-                <span><strong>$</strong> 7.49</span>
-                <span>Buy Now <strong>></strong></span>
-                </span>
-            </span>
-            <span class="popularItem3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                <span class="popularItem3Detail">
-                <span>Italian Pizza</span>
-                <span><strong>$</strong> 7.49</span>
-                <span>Buy Now <strong>></strong></span>
-                </span>
-            </span>
-            </span>
-         </span>
+
+            <div class="popularItemSpanBody">
+            <div class="popularItem1 relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000" >
+                    <div class="popularItem1Detail bg-[#ffffffd6] p-10 rounded-full w-full h-full flex flex-col justify-start absolute -bottom-[70%]">
+                    <h3 class="text-lg -mt-3">Italian Pizza</h3>
+                    <p class="text-xl"><strong class="text-red-500">$</strong> 7.49</p>
+                    <p class="text-white w-2/3 bg-red-500 text-xs text-center py-3 rounded-md shadow-xl my-2 hover:border-red-500 hover:border-2 hover:bg-white hover:scale-105 hover:text-red-500 cursor-pointer">Buy Now <strong>></strong></p>
+                    </div>
+            </div>
+            <div class="popularItem2 relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="popularItem2Detail bg-[#ffffffd6] p-10 rounded-full w-full h-full flex flex-col justify-start absolute -bottom-[70%]">
+                    <h3 class="text-lg -mt-3">Italian Pizza</h3>
+                    <p class="text-xl"><strong class="text-red-500">$</strong> 7.49</p>
+                    <p class="text-white w-2/3 bg-red-500 text-xs text-center py-3 rounded-md shadow-xl my-2 hover:border-red-500 hover:border-2 hover:bg-white hover:scale-105 hover:text-red-500 cursor-pointer">Buy Now <strong>></strong></p>
+                    </div>
+            </div>
+            <div class="popularItem3 relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <div class="popularItem3Detail bg-[#ffffffd6] p-10 rounded-full w-full h-full flex flex-col justify-start absolute -bottom-[70%]">
+                    <h3 class="text-lg -mt-3">Italian Pizza</h3>
+                    <p class="text-xl"><strong class="text-red-500">$</strong> 7.49</p>
+                    <p class="text-white w-2/3 bg-red-500 text-xs text-center py-3 rounded-md shadow-xl my-2 hover:border-red-500 hover:border-2 hover:bg-white hover:scale-105 hover:text-red-500 cursor-pointer">Buy Now <strong>></strong></p>
+                    </div>
+            </div>
+        </div>
+        </div>
          <span class="recentItemSpan">
-            <span class="recentItemSpanHead"><span>Recent Items</span><span>See All</span></span>
+            <span class="recentItemSpanHead">
+                <h3 class="text-2xl pb-4 border-b-2 border-gray-600">Recent Items</h3>
+                <a href="#" class="px-8 py-4 bg-orange-200 text-red-500 rounded-full text-sm hover:shadow-xl">See All</a>
+            </span>
             <span class="recentItemSpanBody">
-            <span class="recentItem1" data-aos="fade-up" data-aos-duration="1000">
-                    <span class="recentItem1Detail">
-                    <span>Italian Pizza</span>
-                    <span><strong>$</strong> 7.49</span>
-                    <span>Buy Now <strong>></strong></span>
-                    </span>
+            <span class="recentItem1 overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="recentItem1Detail bg-[#ffffffd6] p-10 rounded-full w-full h-full flex flex-col justify-start absolute -bottom-[70%]">
+                        <h3 class="text-lg -mt-3">Italian Pizza</h3>
+                        <p class="text-xl"><strong class="text-red-500">$</strong> 7.49</p>
+                        <p class="text-white w-2/3 bg-red-500 text-xs text-center py-3 rounded-md shadow-xl my-2 hover:border-red-500 hover:border-2 hover:bg-white hover:scale-105 hover:text-red-500 cursor-pointer">Buy Now <strong>></strong></p>
+                        </div>
             </span>
-            <span class="recentItem2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                <span class="recentItem2Detail">
-                <span>Italian Pizza</span>
-                <span><strong>$</strong> 7.49</span>
-                <span>Buy Now <strong>></strong></span>
-                </span>
+            <span class="recentItem2 overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <div class="recentItem2Detail bg-[#ffffffd6] p-10 rounded-full w-full h-full flex flex-col justify-start absolute -bottom-[70%]">
+                    <h3 class="text-lg -mt-3">Italian Pizza</h3>
+                    <p class="text-xl"><strong class="text-red-500">$</strong> 7.49</p>
+                    <p class="text-white w-2/3 bg-red-500 text-xs text-center py-3 rounded-md shadow-xl my-2 hover:border-red-500 hover:border-2 hover:bg-white hover:scale-105 hover:text-red-500 cursor-pointer">Buy Now <strong>></strong></p>
+                    </div>
             </span>
-            <span class="recentItem3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-                <span class="recentItem3Detail">
-                <span>Italian Pizza</span>
-                <span><strong>$</strong> 7.49</span>
-                <span>Buy Now <strong>></strong></span>
-                </span>
+            <span class="recentItem3 overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <div class="recentItem3Detail bg-[#ffffffd6] p-10 rounded-full w-full h-full flex flex-col justify-start absolute -bottom-[70%]">
+                    <h3 class="text-lg -mt-3">Italian Pizza</h3>
+                    <p class="text-xl"><strong class="text-red-500">$</strong> 7.49</p>
+                    <p class="text-white w-2/3 bg-red-500 text-xs text-center py-3 rounded-md shadow-xl my-2 hover:border-red-500 hover:border-2 hover:bg-white hover:scale-105 hover:text-red-500 cursor-pointer">Buy Now <strong>></strong></p>
+                    </div>
             </span>
             </span>
          </span>
     </section>
     <section class="customerReview">
-        <span class="customerReviewSpan1">
+        <div class="customerReviewSpan1">
             <img class="chefImage" src="./PERSONS/review.png" alt="review boy">
-            <span class="customerReviewSpan1Box">
-                  <span class="customerReviewSpan1BoxHead">OUR REVIEWER</span>
-                  <span class="customerReviewSpan1ImageBox">
-                    <span ata-aos="fade-right" data-aos-duration="1000" ></span>
-                    <span ata-aos="fade-right" data-aos-duration="1000" data-aos-delay="150"></span>
-                    <span ata-aos="fade-right" data-aos-duration="1000" data-aos-delay="300"></span>
-                    <span ata-aos="fade-right" data-aos-duration="1000" data-aos-delay="450">12k+</span>
-                  </span>
-            </span>
-        </span>
-        <span class="customerReviewSpan2">
-            <span class="customerReviewSpan2Head1">WHAT THEY SAY</span>
-            <span class="customerReviewSpan2Head2">What Our Customer Say About Us</span>
-            <span class="customerReviewSpan2Review"><q> Foody is the best. Besides the many and delicious meals, the service is also very good, especially in the very fast delivery. I highly recommend Foody to you.</q></span>
-            <span class="customerReviewSpan2Profile">
+            <div class="customerReviewSpan1Box">
+                  <h2 class="customerReviewSpan1BoxHead">OUR REVIEWER</h2>
+                  <div class="customerReviewSpan1ImageBox">
+                    <div ata-aos="fade-right" data-aos-duration="1000" ></div>
+                    <div ata-aos="fade-right" data-aos-duration="1000" data-aos-delay="150"></div>
+                    <div ata-aos="fade-right" data-aos-duration="1000" data-aos-delay="300"></div>
+                    <div ata-aos="fade-right" data-aos-duration="1000" data-aos-delay="450">12k+</div>
+                  </div>
+                </div>
+        </div>
+
+        <div class="customerReviewSpan2">
+            <h2 class="customerReviewSpan2Head1">WHAT THEY SAY</h2>
+            <p class="customerReviewSpan2Head2">What Our Customer Say About Us</p>
+            <p class="customerReviewSpan2Review"><q> Foody is the best. Besides the many and delicious meals, the service is also very good, especially in the very fast delivery. I highly recommend Foody to you.</q></p>
+            <div class="customerReviewSpan2Profile">
                 <img src="./PERSONS/woman2.avif" alt="lady">
-                <span class="customerReviewSpan2ProfileBox">
-                    <span class="customerReviewSpan2ProfileName">Theresa Shame</span>
-                    <span class="customerReviewSpan2ProfileDetail">Food Enthusiast</span>
-                </span>
-            </span>
-            <span class="customerReviewSpan2Stars">
+                <div class="customerReviewSpan2ProfileBox">
+                    <p class="customerReviewSpan2ProfileName">Theresa Shame</p>
+                    <p class="customerReviewSpan2ProfileDetail">Food Enthusiast</p>
+                </div>
+            </div>
+            <div class="customerReviewSpan2Stars">
                 <i class="fi fi-sr-star"></i>
                 <i class="fi fi-sr-star"></i>
                 <i class="fi fi-sr-star"></i>
@@ -206,46 +222,47 @@
                 <i class="fi fi-rr-star"></i>
                 &nbsp;&nbsp;
                 4.8
-            </span>
-        </span>
+            </div>
+        </div>
     </section>
-    <footer>
-        <span class="footerSpan1">
-            <span class="logo"><i class="fi fi-rr-pizza-slice"></i><span>Foody</span></span>
-            <span class="footerSpan1Detail">Our job is to fulfilling your tummy with delicious food and with fast and free delivery.</span>
-            <span class="footerBrands">
+</main>
+    <footer id="footer">
+        <div class="footerSpan1">
+            <div class="logo"><i class="fi fi-rr-pizza-slice"></i><span>Foody</span></div>
+            <p class="footerSpan1Detail">Our job is to fulfilling your tummy with delicious food and with fast and free delivery.</p>
+            <div class="footerBrands">
                 <i class="fi fi-brands-instagram"></i>
                 <i class="fi fi-brands-facebook"></i>
                 <i class="fi fi-brands-twitter"></i>
-            </span>
-        </span>
-        <span class="footerSpan2">
+            </div>
+        </div>
+        <div class="footerSpan2">
             <strong>About</strong>
-            <span>About Us</span>
-            <span>Features</span>
-            <span>News</span>
-            <span>Menu</span>
-        </span>
-        <span class="footerSpan3">
+            <a href="#">About Us</a>
+            <a href="#">Features</a>
+            <a href="#">News</a>
+            <a href="#">Menu</a>
+        </div>
+        <div class="footerSpan3">
             <strong>Company</strong>
-            <span>Why Foddy ?</span>
-            <span>Partner With Us</span>
-            <span>FAQ</span>
-            <span>Blog</span>
-        </span>
-        <span class="footerSpan4">
+            <a href="#">Why Foddy ?</a>
+            <a href="#">Partner With Us</a>
+            <a href="#">FAQ</a>
+            <a href="#">Blog</a>
+        </div>
+        <div class="footerSpan4">
             <strong>Support</strong>
-            <span>Account</span>
-            <span>Support Center</span>
-            <span>Feedback</span>
-            <span>Contact Us</span>
-            <span>Accesbility</span>
-        </span>
-        <span class="footerSpan5">
-            <strong>Get In Touch</strong>
-            <span>Question or Feedback ?<br> We'd love to hear from you</span>
-            <span class="footerEmail"><input type="email" name="email" placeholder="Email Address"><i class="fi fi-sr-paper-plane-top"></i></span>
-        </span>
+            <a href="#">Account</a>
+            <a href="#">Support Center</a>
+            <a href="#">Feedback</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Accesbility</a>
+        </div>
+        <div class="footerSpan5">
+            <h2><strong>Get In Touch</strong></h2>
+            <p>Question or Feedback ?<br> We'd love to hear from you</p>
+            <div class="footerEmail"><input type="email" name="email" placeholder="Email Address" class="text-xs"><i class="fi fi-sr-paper-plane-top"></i></div>
+        </div>
     </footer>
 </body>
 </html>
