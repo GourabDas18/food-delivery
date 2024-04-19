@@ -13,18 +13,40 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./script.js"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            screens: {
+      '2xl': {'max': '1535px'},
+      // => @media (max-width: 1535px) { ... }
+
+      'xl': {'max': '1279px'},
+      // => @media (max-width: 1279px) { ... }
+
+      'lg': {'max': '1200px'},
+      // => @media (max-width: 1023px) { ... }
+
+      'md': {'max': '780px'},
+      // => @media (max-width: 767px) { ... }
+
+      'sm': {'max': '639px'},
+      // => @media (max-width: 639px) { ... }
+    }
+          }
+        }
+      </script>
     <title>Foody</title>
 </head>
 <body>
     <header>
         <nav data-aos="fade-in">
             <span id="mobileMenubtn"><i class="fi fi-sr-apps text-xl" id="mobileMenubtnOn"></i><i class="fi fi-sr-angle-circle-up" id="mobileMenubtnOff"></i><span class="logo"><i class="fi fi-rr-pizza-slice"></i><span>Foody</span></span></span>
-            <span class="logo"><i class="fi fi-rr-pizza-slice"></i><span>Foody</span></span>
+            <span class="logo"><i class="fi fi-rr-pizza-slice lg:text-lg"></i><span>Foody</span></span>
             <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#service">Services</a></li>
-                <li><a href="#foodMenu">Menu</a></li>
-                <li><a href="#footer">Contact</a></li>
+                <li class="lg:text-xs"><a href="#">Home</a></li>
+                <li class="lg:text-xs"><a href="#service">Services</a></li>
+                <li class="lg:text-xs"><a href="#foodMenu">Menu</a></li>
+                <li class="lg:text-xs"><a href="#footer">Contact</a></li>
             </ul>
             <ul id="mobilemenu">
                 <li><a href="#">Home</a></li>
@@ -33,10 +55,10 @@
                 <li><a href="#footer">Contact</a></li>
             </ul>
             <div class="menu1">
-                <i class="fi fi-rr-search"></i>
-                <i class="fi fi-rr-comment-alt"></i>
+                <i class="fi fi-rr-search text-xs"></i>
+                <i class="fi fi-rr-comment-alt text-xs"></i>
                 <div class="login">
-                    <i class="fi fi-rr-circle-user"></i>
+                    <i class="fi fi-rr-circle-user text-xs"></i>
                     login
                 </div>
             </div>
@@ -45,17 +67,17 @@
 
         <div class="avatar">
             <div class="leftBox" data-aos="fade-in" data-aos-duration="1700">
-               <div class="text-red-500 font-bold flex flex-row items-center gap-4 bg-red-100 w-fit px-6 py-4 rounded-full introbtn"><p>More than Faster</p> <i class="fi fi-rr-location-alt"></i></div>
-               <h2 class="text-[3rem]">
+               <div class="text-red-500 font-bold flex flex-row items-center gap-4 bg-red-100 w-fit px-6 py-4 lg:px-5 lg:py-4 lg:text-xs rounded-full introbtn"><p>More than Faster</p> <i class="fi fi-rr-location-alt"></i></div>
+               <h2 class="text-[3rem] lg:text-4xl">
                  Be The Fastest In Delivering <br>
                  Your <strong>Food</strong>
                </h2>
-               <p>
+               <p class="lg:text-sm">
                  Our job is to filling your tummy with delicious food and <br>with fast and free delivery.
                </p>
                <div class="flex flex-row items-center gap-8">
-                 <button class="px-10 py-7  shadow-xl text-white bg-red-500 rounded-full startbtn">Get Started</button>
-                 <div class="flex flex-row gap-4 items-center"><i class="fi fi-sr-play bg-yellow-300 p-3 rounded-full"></i> <p class="drop-shadow-2xl font-semibold text-gray-700">Watch Video</p></div>
+                 <button class="px-10 py-7  shadow-xl text-white bg-red-500 rounded-full startbtn lg:px-5 lg:py-4 lg:text-xs">Get Started</button>
+                 <div class="flex flex-row gap-4 items-center"><i class="fi fi-sr-play bg-yellow-300 p-3 rounded-full lg:text-xs cursor-pointer"></i> <p class="drop-shadow-2xl font-semibold text-gray-700 lg:text-xs">Watch Video</p></div>
                </div>
             </div>
             <div class="rightBox">
@@ -65,25 +87,25 @@
                <div id="callerSection" data-aos="fade-right" data-aos-delay="800" class="cursor-pointer">
                  <img src="./IMAGE/boy.png" id="boy" alt="courier">
                  <div class="name">
-                     <p class="text-xs font-semibold">Richi Richard</p>
-                     <p class="text-xs">Food Courier</p>
+                     <p class="text-xs lg:text-[0.8vw] md:text-xs sm:text-[2.6vw] font-semibold">Richi Richard</p>
+                     <p class="text-xs lg:text-[0.8vw] md:text-xs sm:text-[2.4vw]">Food Courier</p>
                  </div>
                  <i class="fi fi-rr-phone-flip"></i>
                </div>
-               <div id="reviewSection" data-aos="fade-left" data-aos-delay="1250" class="w-max flex flex-row items-center">
+               <div id="reviewSection" data-aos="fade-left" data-aos-delay="1250" class="w-max flex flex-row items-center sm:top-40">
                 <img src="./PIZZA/pizza1.jpg" alt="pizza" class="mr-2">
-                <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-4 lg:gap-0">
                     <div class="flex flex-col">
-                        <p class="itemName text-sm">Italian Pizza</p>
+                        <p class="itemName text-sm lg:text-xs">Italian Pizza</p>
                         <div class="stars flex flex-row items-center">
-                            <i class="fi fi-sr-star text-red-500"></i>
-                            <i class="fi fi-sr-star text-red-500"></i>
-                            <i class="fi fi-sr-star text-red-500"></i>
-                            <i class="fi fi-sr-star text-red-500"></i>
-                            <i class="fi fi-rr-star text-red-500"></i>
+                            <i class="fi fi-sr-star text-red-500 lg:text-xs"></i>
+                            <i class="fi fi-sr-star text-red-500 lg:text-xs"></i>
+                            <i class="fi fi-sr-star text-red-500 lg:text-xs"></i>
+                            <i class="fi fi-sr-star text-red-500 lg:text-xs"></i>
+                            <i class="fi fi-rr-star text-red-500 lg:text-xs"></i>
                         </div>
                     </div>
-                 <p class="itemName text-lg text-red-500">
+                 <p class="itemName text-lg text-red-500 lg:text-md">
                      <strong>$</strong>
                      7.5
                  </p>
@@ -128,62 +150,62 @@
     </section>
     <section class="foodMenu" id="foodMenu">
          <h2 class="foodMenuSpan1 text-3xl">OUR MENU</h2>
-         <p class="foodMenuSpan2 text-lg">Menu That Always Makes You Fall In Love</p>
+         <p class="foodMenuSpan2 text-lg lg:text-md">Menu That Always Makes You Fall In Love</p>
          <div class="popularItemSpan">
             <span class="popularItemSpanHead">
-                <h3 class="text-2xl pb-4 border-b-2 border-gray-600">Popular Items</h3>
-                <a href="#" class="px-8 py-4 bg-orange-200 text-red-500 rounded-full text-sm hover:shadow-xl">See All</a>
+                <h3 class="text-2xl lg:text-lg pb-4 border-b-2 border-gray-600">Popular Items</h3>
+                <a href="#" class="px-8 py-4 lg:px-4 lg:py-2 bg-orange-200 text-red-500 rounded-full text-sm lg:text-xs hover:shadow-xl">See All</a>
             </span>
 
             <div class="popularItemSpanBody">
             <div class="popularItem1 relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000" >
-                    <div class="popularItem1Detail bg-[#ffffffd6] p-10 rounded-full w-full h-full flex flex-col justify-start absolute -bottom-[70%]">
-                    <h3 class="text-lg -mt-3">Italian Pizza</h3>
-                    <p class="text-xl"><strong class="text-red-500">$</strong> 7.49</p>
-                    <p class="text-white w-2/3 bg-red-500 text-xs text-center py-3 rounded-md shadow-xl my-2 hover:border-red-500 hover:border-2 hover:bg-white hover:scale-105 hover:text-red-500 cursor-pointer">Buy Now <strong>></strong></p>
+                    <div class="popularItem1Detail bg-[#ffffffd6] p-10 lg:p-7 md:p-11 rounded-full w-full h-full flex flex-col justify-start absolute -bottom-[70%]">
+                     <h3 class="text-lg -mt-3 lg:text-xs md:text-lg">Italian Pizza</h3>
+                        <p class="text-xl lg:text-sm md:text-lg"><strong class="text-red-500">$</strong> 7.49</p>
+                      <p class="text-white w-2/3 bg-red-500 text-xs lg:text-[0.9vw] md:text-sm text-center py-3 lg:py-[0.4vw] md:p-3 rounded-md shadow-xl my-2 hover:border-red-500 hover:border-2 hover:bg-white hover:scale-105 hover:text-red-500 cursor-pointer">Buy Now <strong>></strong></p>
                     </div>
             </div>
             <div class="popularItem2 relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                <div class="popularItem2Detail bg-[#ffffffd6] p-10 rounded-full w-full h-full flex flex-col justify-start absolute -bottom-[70%]">
-                    <h3 class="text-lg -mt-3">Italian Pizza</h3>
-                    <p class="text-xl"><strong class="text-red-500">$</strong> 7.49</p>
-                    <p class="text-white w-2/3 bg-red-500 text-xs text-center py-3 rounded-md shadow-xl my-2 hover:border-red-500 hover:border-2 hover:bg-white hover:scale-105 hover:text-red-500 cursor-pointer">Buy Now <strong>></strong></p>
+                <div class="popularItem2Detail bg-[#ffffffd6] p-10 lg:p-7 md:p-11 rounded-full w-full h-full flex flex-col justify-start absolute -bottom-[70%]">
+                     <h3 class="text-lg -mt-3 lg:text-xs md:text-lg">Italian Pizza</h3>
+                        <p class="text-xl lg:text-sm md:text-lg"><strong class="text-red-500">$</strong> 7.49</p>
+                  <p class="text-white w-2/3 bg-red-500 text-xs lg:text-[0.9vw] md:text-sm text-center py-3 lg:py-[0.4vw] md:p-3 rounded-md shadow-xl my-2 hover:border-red-500 hover:border-2 hover:bg-white hover:scale-105 hover:text-red-500 cursor-pointer">Buy Now <strong>></strong></p>
                     </div>
             </div>
             <div class="popularItem3 relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                <div class="popularItem3Detail bg-[#ffffffd6] p-10 rounded-full w-full h-full flex flex-col justify-start absolute -bottom-[70%]">
-                    <h3 class="text-lg -mt-3">Italian Pizza</h3>
-                    <p class="text-xl"><strong class="text-red-500">$</strong> 7.49</p>
-                    <p class="text-white w-2/3 bg-red-500 text-xs text-center py-3 rounded-md shadow-xl my-2 hover:border-red-500 hover:border-2 hover:bg-white hover:scale-105 hover:text-red-500 cursor-pointer">Buy Now <strong>></strong></p>
+                <div class="popularItem3Detail bg-[#ffffffd6] p-10 lg:p-7 md:p-11 rounded-full w-full h-full flex flex-col justify-start absolute -bottom-[70%]">
+                     <h3 class="text-lg -mt-3 lg:text-xs md:text-lg">Italian Pizza</h3>
+                        <p class="text-xl lg:text-sm md:text-lg"><strong class="text-red-500">$</strong> 7.49</p>
+                    <p class="text-white w-2/3 bg-red-500 text-xs lg:text-[0.9vw] md:text-sm text-center py-3 lg:py-[0.4vw] md:p-3 rounded-md shadow-xl my-2 hover:border-red-500 hover:border-2 hover:bg-white hover:scale-105 hover:text-red-500 cursor-pointer ">Buy Now <strong>></strong></p>
                     </div>
             </div>
         </div>
         </div>
          <span class="recentItemSpan">
             <span class="recentItemSpanHead">
-                <h3 class="text-2xl pb-4 border-b-2 border-gray-600">Recent Items</h3>
-                <a href="#" class="px-8 py-4 bg-orange-200 text-red-500 rounded-full text-sm hover:shadow-xl">See All</a>
-            </span>
+                <h3 class="text-2xl lg:text-lg pb-4 border-b-2 border-gray-600">Popular Items</h3>
+                <a href="#" class="px-8 py-4 lg:px-4 lg:py-2 bg-orange-200 text-red-500 rounded-full text-sm lg:text-xs hover:shadow-xl">See All</a>
+             </span>
             <span class="recentItemSpanBody">
             <span class="recentItem1 overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="recentItem1Detail bg-[#ffffffd6] p-10 rounded-full w-full h-full flex flex-col justify-start absolute -bottom-[70%]">
-                        <h3 class="text-lg -mt-3">Italian Pizza</h3>
-                        <p class="text-xl"><strong class="text-red-500">$</strong> 7.49</p>
-                        <p class="text-white w-2/3 bg-red-500 text-xs text-center py-3 rounded-md shadow-xl my-2 hover:border-red-500 hover:border-2 hover:bg-white hover:scale-105 hover:text-red-500 cursor-pointer">Buy Now <strong>></strong></p>
+                    <div class="recentItem1Detail bg-[#ffffffd6] p-10 lg:p-7 md:p-10 rounded-full w-full h-full flex flex-col justify-start absolute -bottom-[70%]">
+                        <h3 class="text-lg -mt-3 lg:text-xs md:text-lg">Italian Pizza</h3>
+                        <p class="text-xl lg:text-sm md:text-lg"><strong class="text-red-500">$</strong> 7.49</p>
+                      <p class="text-white w-2/3 bg-red-500 text-xs lg:text-[0.9vw] md:text-sm text-center py-3 lg:py-[0.4vw] md:p-3 rounded-md shadow-xl my-2 hover:border-red-500 hover:border-2 hover:bg-white hover:scale-105 hover:text-red-500 cursor-pointer">Buy Now <strong>></strong></p>
                         </div>
             </span>
             <span class="recentItem2 overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                <div class="recentItem2Detail bg-[#ffffffd6] p-10 rounded-full w-full h-full flex flex-col justify-start absolute -bottom-[70%]">
-                    <h3 class="text-lg -mt-3">Italian Pizza</h3>
-                    <p class="text-xl"><strong class="text-red-500">$</strong> 7.49</p>
-                    <p class="text-white w-2/3 bg-red-500 text-xs text-center py-3 rounded-md shadow-xl my-2 hover:border-red-500 hover:border-2 hover:bg-white hover:scale-105 hover:text-red-500 cursor-pointer">Buy Now <strong>></strong></p>
+                <div class="recentItem2Detail bg-[#ffffffd6] p-10 lg:p-7 md:p-11 rounded-full w-full h-full flex flex-col justify-start absolute -bottom-[70%]">
+                     <h3 class="text-lg -mt-3 lg:text-xs md:text-lg">Italian Pizza</h3>
+                        <p class="text-xl lg:text-sm md:text-lg"><strong class="text-red-500">$</strong> 7.49</p>
+                  <p class="text-white w-2/3 bg-red-500 text-xs lg:text-[0.9vw] md:text-sm text-center py-3 lg:py-[0.4vw] md:p-3 rounded-md shadow-xl my-2 hover:border-red-500 hover:border-2 hover:bg-white hover:scale-105 hover:text-red-500 cursor-pointer">Buy Now <strong>></strong></p>
                     </div>
             </span>
             <span class="recentItem3 overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-                <div class="recentItem3Detail bg-[#ffffffd6] p-10 rounded-full w-full h-full flex flex-col justify-start absolute -bottom-[70%]">
-                    <h3 class="text-lg -mt-3">Italian Pizza</h3>
-                    <p class="text-xl"><strong class="text-red-500">$</strong> 7.49</p>
-                    <p class="text-white w-2/3 bg-red-500 text-xs text-center py-3 rounded-md shadow-xl my-2 hover:border-red-500 hover:border-2 hover:bg-white hover:scale-105 hover:text-red-500 cursor-pointer">Buy Now <strong>></strong></p>
+                <div class="recentItem3Detail bg-[#ffffffd6] p-10 lg:p-7 md:p-11 rounded-full w-full h-full flex flex-col justify-start absolute -bottom-[70%]">
+                     <h3 class="text-lg -mt-3 lg:text-xs md:text-lg">Italian Pizza</h3>
+                        <p class="text-xl lg:text-sm md:text-lg"><strong class="text-red-500">$</strong> 7.49</p>
+                  <p class="text-white w-2/3 bg-red-500 text-xs lg:text-[0.9vw] md:text-sm text-center py-3 lg:py-[0.4vw] md:p-3 rounded-md shadow-xl my-2 hover:border-red-500 hover:border-2 hover:bg-white hover:scale-105 hover:text-red-500 cursor-pointer">Buy Now <strong>></strong></p>
                     </div>
             </span>
             </span>
@@ -205,7 +227,7 @@
 
         <div class="customerReviewSpan2">
             <h2 class="customerReviewSpan2Head1">WHAT THEY SAY</h2>
-            <p class="customerReviewSpan2Head2">What Our Customer Say About Us</p>
+            <p class="customerReviewSpan2Head2 lg:text-xl">What Our Customer Say About Us</p>
             <p class="customerReviewSpan2Review"><q> Foody is the best. Besides the many and delicious meals, the service is also very good, especially in the very fast delivery. I highly recommend Foody to you.</q></p>
             <div class="customerReviewSpan2Profile">
                 <img src="./PERSONS/woman2.avif" alt="lady">
@@ -214,7 +236,7 @@
                     <p class="customerReviewSpan2ProfileDetail">Food Enthusiast</p>
                 </div>
             </div>
-            <div class="customerReviewSpan2Stars">
+            <div class="customerReviewSpan2Stars lg:text-sm">
                 <i class="fi fi-sr-star"></i>
                 <i class="fi fi-sr-star"></i>
                 <i class="fi fi-sr-star"></i>
@@ -238,30 +260,30 @@
         </div>
         <div class="footerSpan2">
             <strong>About</strong>
-            <a href="#">About Us</a>
-            <a href="#">Features</a>
-            <a href="#">News</a>
-            <a href="#">Menu</a>
+            <a href="#" class="text-[1.1vw] md:text-sm">About Us</a>
+            <a href="#" class="text-[1.1vw] md:text-sm">Features</a>
+            <a href="#" class="text-[1.1vw] md:text-sm">News</a>
+            <a href="#" class="text-[1.1vw] md:text-sm">Menu</a>
         </div>
         <div class="footerSpan3">
             <strong>Company</strong>
-            <a href="#">Why Foddy ?</a>
-            <a href="#">Partner With Us</a>
-            <a href="#">FAQ</a>
-            <a href="#">Blog</a>
+            <a href="#" class="text-[1.1vw] md:text-sm">Why Foddy ?</a>
+            <a href="#" class="text-[1.1vw] md:text-sm">Partner With Us</a>
+            <a href="#" class="text-[1.1vw] md:text-sm">FAQ</a>
+            <a href="#" class="text-[1.1vw] md:text-sm">Blog</a>
         </div>
         <div class="footerSpan4">
             <strong>Support</strong>
-            <a href="#">Account</a>
-            <a href="#">Support Center</a>
-            <a href="#">Feedback</a>
-            <a href="#">Contact Us</a>
-            <a href="#">Accesbility</a>
+            <a href="#" class="text-[1.1vw] md:text-sm">Account</a>
+            <a href="#" class="text-[1.1vw] md:text-sm">Support Center</a>
+            <a href="#" class="text-[1.1vw] md:text-sm">Feedback</a>
+            <a href="#" class="text-[1.1vw] md:text-sm">Contact Us</a>
+            <a href="#" class="text-[1.1vw] md:text-sm">Accesbility</a>
         </div>
         <div class="footerSpan5">
             <h2><strong>Get In Touch</strong></h2>
-            <p>Question or Feedback ?<br> We'd love to hear from you</p>
-            <div class="footerEmail"><input type="email" name="email" placeholder="Email Address" class="text-xs"><i class="fi fi-sr-paper-plane-top"></i></div>
+            <p class="text-[1.1vw] md:text-sm">Question or Feedback ?<br> We'd love to hear from you</p>
+            <div class="footerEmail"><input type="email" name="email" placeholder="Email Address" class="text-xs lg:text-[1vw]"><i class="fi fi-sr-paper-plane-top lg:text-[1vw] md:text-sm"></i></div>
         </div>
     </footer>
 </body>
